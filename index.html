@@ -559,10 +559,15 @@
   transform:translateY(80px) scale(.96);
   pointer-events:none;
 }
-#cover .preview-kicker { font-size:9px; letter-spacing:.25em; text-transform:uppercase; margin-bottom:9px; color:#8d6941; }
-#cover .invited-kicker {font-size: 22px; font-weight: 400; letter-spacing: .18em;}
-#cover .preview-names { font-family:"Brush Script MT","Segoe Script",cursive; font-size:35px; line-height:1; }
-#cover .preview-date { margin-top:10px; font-size:10px; letter-spacing:.18em; }
+#cover .preview-big-invited {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: .15em;
+    color: #5b4638;
+    text-align: center;
+    line-height: 1.2;
+}
 #cover.opening .envelope { cursor:default; }
 /* ===== FINAL MOBILE GIFT FIX ===== */
 
@@ -707,12 +712,9 @@
       <div class="date">11 · 30 · 2026</div>
 
       <div class="envelope-wrap">
-        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open invitation">
-          <div class="invite-preview" id="invitePreview" aria-hidden="true">
-           <div class="preview-kicker invited-kicker">YOU'RE INVITED</div>
-            <div class="preview-names">Neal &amp; Angela</div>
-            <div class="preview-date">NOVEMBER 30 · 2026</div>
-          </div>
+    <div class="invite-preview" id="invitePreview" aria-hidden="true">
+    <div class="preview-big-invited">YOU'RE INVITED</div>
+</div>
           <div class="flap"></div>
           <div class="seal" id="waxSeal" role="button" tabindex="0" aria-label="Open invitation and play music">A&amp;N</div>
         </div>
