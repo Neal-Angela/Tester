@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Gift Preference | Neal & Angela</title>
+
+  <style>
+    :root {
+      --paper: #fffaf1;
+      --ink: #49382d;
+      --gold: #a7793b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      background: #fffaf1;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+
+      background:
+        linear-gradient(
+          rgba(255, 250, 241, 0.78),
+          rgba(255, 250, 241, 0.78)
+        ),
+        url("background invitation 1.jpeg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 30px 50px;
+      text-align: center;
+    }
+
+    .top-decoration {
+      color: var(--gold);
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .top-decoration::before,
+    .top-decoration::after {
+      content: "";
+      display: inline-block;
+      width: 80px;
+      height: 1px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+    .gift-title {
+      margin: 15px 0 45px;
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: 72px;
+      line-height: 1;
+      font-weight: normal;
+      color: #5b4638;
+    }
+
+    .section {
+      margin-bottom: 42px;
+    }
+
+    .section-title {
+      margin: 0 0 20px;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: -8px auto 22px;
+    }
+
+    .divider .line {
+      width: 120px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .divider .symbol {
+      color: var(--gold);
+      font-size: 20px;
+    }
+
+    .gift-list {
+      list-style-position: inside;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 680px;
+      text-align: left;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .gift-list li {
+      margin: 2px 0;
+    }
+
+    .note-box {
+      max-width: 720px;
+      margin: 55px auto 35px;
+      padding: 25px 30px;
+      border: 1px solid var(--gold);
+      border-radius: 22px;
+      background: rgba(255, 250, 241, 0.55);
+      font-size: 18px;
+      line-height: 1.65;
+      font-style: italic;
+    }
+
+    .note-box strong {
+      font-size: 20px;
+      font-style: normal;
+    }
+
+    .bottom-decoration {
+      color: var(--gold);
+      font-size: 24px;
+      margin: 32px 0 18px;
+    }
+
+    .bottom-decoration::before,
+    .bottom-decoration::after {
+      content: "";
+      display: inline-block;
+      width: 80px;
+      height: 1px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+    .names {
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: 38px;
+      color: #5b4638;
+      margin-bottom: 8px;
+    }
+
+    .date {
+      font-size: 14px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding: 40px 20px 35px;
+      }
+
+      .gift-title {
+        font-size: 52px;
+        margin-bottom: 35px;
+      }
+
+      .section {
+        margin-bottom: 36px;
+      }
+
+      .section-title {
+        font-size: 21px;
+        line-height: 1.35;
+      }
+
+      .gift-list {
+        max-width: 100%;
+        font-size: 17px;
+        line-height: 1.55;
+        padding: 0 5px;
+      }
+
+      .divider .line {
+        width: 65px;
+      }
+
+      .note-box {
+        padding: 22px 18px;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 45px;
+      }
+
+      .note-box strong {
+        font-size: 18px;
+      }
+
+      .names {
+        font-size: 32px;
+      }
+
+      .date {
+        font-size: 11px;
+        letter-spacing: 0.20em;
+      }
+
+      .top-decoration::before,
+      .top-decoration::after,
+      .bottom-decoration::before,
+      .bottom-decoration::after {
+        width: 55px;
+      }
+    }
+.back-btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 12px 24px;
+  text-decoration: none !important;
+  color: #fff !important;
+  background: #70533c;
+  border-radius: 999px;
+
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 7px 12px rgba(60,35,20,.30),
+    inset 0 2px 2px rgba(255,255,255,.25);
+}
+
+/* Prevent browser blue/purple link colors */
+.back-btn:link,
+.back-btn:visited,
+.back-btn:hover,
+.back-btn:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="top-decoration">❦</div>
+
+    <h1 class="gift-title">Gift Preference</h1>
+
+
+    <section class="section">
+
+      <h2 class="section-title">Kitchen Essentials</h2>
+
+      <div class="divider">
+        <span class="line"></span>
+        <span class="symbol">❦</span>
+        <span class="line"></span>
+      </div>
+
+      <ul class="gift-list">
+        <li>Rice Cooker</li>
+        <li>Blender</li>
+        <li>Electric Grinder</li>
+        <li>Coffee Maker</li>
+        <li>High quality Steel Pan</li>
+        <li>Stainless Basin</li>
+        <li>Cooking Pot</li>
+        <li>Stainless steel deep fryer pot</li>
+        <li>Knife set</li>
+        <li>McCormick Spices &amp; Seasoning with container</li>
+      </ul>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2 class="section-title">Living Room Essentials</h2>
+
+      <div class="divider">
+        <span class="line"></span>
+        <span class="symbol">❦</span>
+        <span class="line"></span>
+      </div>
+
+      <ul class="gift-list">
+        <li>Air Purifier</li>
+        <li>Air Fresheners (kitchen, living room, bathroom)</li>
+        <li>Vacuum</li>
+        <li>Indoor slippers for couple</li>
+        <li>Bean bag</li>
+        <li>Black hanging wall shelf</li>
+        <li>Black Wall decor art painting photo (largest size)</li>
+        <li>Big artificial Plants</li>
+        <li>PMOP Self Wash Mop 2 in 1</li>
+      </ul>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2 class="section-title">Bedroom Essentials</h2>
+
+      <div class="divider">
+        <span class="line"></span>
+        <span class="symbol">❦</span>
+        <span class="line"></span>
+      </div>
+
+      <ul class="gift-list">
+        <li>Duvet Set</li>
+        <li>Foldable storage organizer</li>
+        <li>Queen Size bedsheet and pillowcase</li>
+        <li>Marshmallow Microfiber Blanket</li>
+        <li>Wall Mounted Make Up mirror</li>
+        <li>Couple sleepwear</li>
+      </ul>
+
+    </section>
+
+
+    <section class="section">
+
+      <h2 class="section-title">Bathroom Essentials</h2>
+
+      <div class="divider">
+        <span class="line"></span>
+        <span class="symbol">❦</span>
+        <span class="line"></span>
+      </div>
+
+      <ul class="gift-list">
+        <li>Plush Cotton Bath Absorbent Towel</li>
+        <li>Black rug non slip</li>
+        <li>Large Capacity Plastic Laundry Basket with cover</li>
+        <li>PC Personal Collection Sof &amp; Mmmm Eternity Concentrated Fabric Conditioner (Purple)</li>
+      </ul>
+
+    </section>
+
+
+    <div class="note-box">
+      <strong>Note:</strong>
+      While these are our gift preferences, your presence at our celebration is truly the greatest gift.
+      Please know that gifts are entirely optional; having you share this special moment with us is more than enough.
+    </div>
+
+<a href="index.html?open=true" class="back-btn">← Back to Invitation</a>
+
+    <div class="bottom-decoration">❦</div>
+
+    <div class="names">Neal &amp; Angela</div>
+
+    <div class="date">November 30, 2026</div>
+
+
+
+  </main>
+
+</body>
+</html>
