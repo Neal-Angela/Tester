@@ -335,26 +335,19 @@
   /* ===== GIFT PREFERENCE OVERLAY ===== */
 
 .gift-overlay {
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  overflow-y:auto;
-
-  background:
-    linear-gradient(
-      rgba(255,250,241,0.78),
-      rgba(255,250,241,0.78)
-    ),
-    url("background invitation 1.jpeg");
-
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fffaf1;
 }
 
 .gift-overlay.show {
-  display:block;
+    display: block;
 }
 
 .gift-overlay-page {
