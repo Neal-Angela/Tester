@@ -56,8 +56,7 @@
   .hero{min-height:100svh;padding:54px 28px 42px;display:flex;flex-direction:column;align-items:center;text-align:center}
   .eyebrow {font-family: "Cormorant Garamond", Georgia, serif; font-size: 19px; font-weight: 500; letter-spacing: .22em;margin-top: 16px;}
   h1{font-size:15px;font-weight:400;letter-spacing:.18em;margin:36px 0 12px}
-  .invited-title {font-size: 15px; font-weight: 300; letter-spacing: .22em; margin: 28px 0 14px;}
-  .names{font-family:"Brush Script MT","Segoe Script",cursive;font-size:57px;line-height:.95;color:#5b4638}
+  .names{font-family:"Brush Script MT","Segoe Script",cursive;font-size:57px;line-height:.95;color:#5b4638  margin-top: 25px;}
   .date{font-size:20px;letter-spacing:.15em;margin:18px 0 28px}
   .envelope-wrap{
     width:330px;
@@ -561,6 +560,7 @@
   pointer-events:none;
 }
 #cover .preview-kicker { font-size:9px; letter-spacing:.25em; text-transform:uppercase; margin-bottom:9px; color:#8d6941; }
+#cover .invited-kicker {font-size: 22px; font-weight: 400; letter-spacing: .18em;}
 #cover .preview-names { font-family:"Brush Script MT","Segoe Script",cursive; font-size:35px; line-height:1; }
 #cover .preview-date { margin-top:10px; font-size:10px; letter-spacing:.18em; }
 #cover.opening .envelope { cursor:default; }
@@ -703,14 +703,13 @@
   <div class="invite-card">
     <div class="hero">
       <div class="eyebrow">SAVE THE DATE!!</div>
-      <h1 class="invited-title">You're Invited</h1>
       <div class="names">Neal & Angela</div>
       <div class="date">11 · 30 · 2026</div>
 
       <div class="envelope-wrap">
         <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open invitation">
           <div class="invite-preview" id="invitePreview" aria-hidden="true">
-            <div class="preview-kicker">Together with our families</div>
+           <div class="preview-kicker invited-kicker">YOU'RE INVITED</div>
             <div class="preview-names">Neal &amp; Angela</div>
             <div class="preview-date">NOVEMBER 30 · 2026</div>
           </div>
