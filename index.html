@@ -111,12 +111,19 @@
     .flap::before {
     content: "";
     position: absolute;
-    inset: 8px;
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
-    border-top: 1px solid rgba(120, 90, 55, 0.25);
+    inset: 0;
     background:
-        linear-gradient(27deg, transparent 49.5%, rgba(120,90,55,.30) 50%, transparent 50.5%),
-        linear-gradient(-27deg, transparent 49.5%, rgba(120,90,55,.30) 50%, transparent 50.5%);
+        linear-gradient(27deg,
+            transparent 49.7%,
+            rgba(120,90,55,.35) 50%,
+            transparent 50.3%)
+            left bottom / 50% 100% no-repeat,
+
+        linear-gradient(-27deg,
+            transparent 49.7%,
+            rgba(120,90,55,.35) 50%,
+            transparent 50.3%)
+            right bottom / 50% 100% no-repeat;
 }
 
   /* Metallic gold wax seal */
